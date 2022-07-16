@@ -1,0 +1,50 @@
+.heading{
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    width: 97%;
+    animation-name: BSround;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+body{
+    background: url('background.jpg');
+}
+.note{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    line-height: 2;
+}
+.copy_right_footer{
+    font-size: 15px;
+    background-color: cyan;
+    color: coral;
+    margin: 20px;
+    padding: 15px;
+    width: 97%;
+    animation-name: BSround;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+@keyframes BSround{
+    0%{box-shadow: 40px 40px  20px inset yellow;}
+    25%{box-shadow: 40px -40px 20px inset rgb(9, 167, 1);}
+    50%{box-shadow: -40px -40px 20px inset rgb(0, 132, 255);}
+    75%{box-shadow: -40px 40px 20px inset rgb(255, 0, 153);}
+    100%{box-shadow: 40px 40px 20px inset yellow;}
+}
+canvas{
+    margin: 50px;
+    border:2px solid black;
+    border-radius: 20px;
+    animation-name: BSround;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    position: fixed;
+}
