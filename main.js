@@ -10,12 +10,6 @@ function setup(){
 function modalloaded(){
     console.log("Posenet is Initiallised!")
 }
-function draw(){
-    background("#696765");
-    text("Anbu", 50, 400);
-    fill("#1eaff0");
-    textSize(difference);
-}
 function gotPoses(results){
     if(results.length>0){
         console.log(results)
@@ -25,4 +19,10 @@ function gotPoses(results){
     leftwristx  = results[0].pose.leftWrist.x;
     difference  = floor(leftwristx - rightwristx);
     console.log("right wrist x = "+rightwristx+" | left wrist x = "+leftwristx+" | difference = "+difference);
+}
+function draw(){
+    background("#696765");
+    text("Anbu", 50, 400);
+    fill("#1eaff0");
+    textSize(difference);
 }
