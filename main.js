@@ -1,3 +1,6 @@
+nosex="0";
+nosey="0";
+difference="0";
 function setup(){
     video= createCapture(VIDEO);
     video.size(500,450);
@@ -18,11 +21,15 @@ function gotPoses(results){
     rightwristx = results[0].pose.rightWrist.x;
     leftwristx  = results[0].pose.leftWrist.x;
     difference  = floor(leftwristx - rightwristx);
+
+    nosex = results[0].pose.nose.x;
+    nosey = results[0].pose.nose.y;
+
     console.log("right wrist x = "+rightwristx+" | left wrist x = "+leftwristx+" | difference = "+difference);
 }
 function draw(){
     background("#696765");
-    text("Anbu", 50, 400);
+    text("Anbu",nosex ,nosey );
     fill("#1eaff0");
     textSize(difference);
 }
